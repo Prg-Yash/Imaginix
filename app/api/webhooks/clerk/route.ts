@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
-import { clerkClient } from "@clerk/nextjs/server";
-import { WebhookEvent } from "@clerk/nextjs/server";
+
+import { WebhookEvent, clerkClient } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
@@ -70,7 +70,7 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
-    const newUser = await createUser(user as CreateUserParams);
+    const newUser = await createUser(user as any);
 
     // Set public metadata
     if (newUser) {
@@ -95,7 +95,7 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
-    const updatedUser = await updateUser(id, user as UpdateUserParams);
+    const updatedUser = await updateUser(id, user as any);
 
     return NextResponse.json({ message: "OK", user: updatedUser });
   }
