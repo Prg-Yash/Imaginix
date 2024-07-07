@@ -62,7 +62,7 @@ const TransformedImage = ({
             onError={() => {
               debounce(() => {
                 setIsTransforming && setIsTransforming(false);
-              }, 8000);
+              }, 8000)();
             }}
             {...transformationConfig}
           />
@@ -74,6 +74,7 @@ const TransformedImage = ({
                 width={50}
                 height={50}
               />
+              <p className="text-white/80">Please wait...</p>
             </div>
           )}
         </div>
