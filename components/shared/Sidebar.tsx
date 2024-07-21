@@ -17,8 +17,8 @@ const Sidebar = () => {
           <Image
             src="/assets/images/logo.png"
             alt="logo"
-            width={180}
-            height={28}
+            width={320}
+            height={200}
           />
         </Link>
 
@@ -82,9 +82,15 @@ const Sidebar = () => {
           </SignedIn>
 
           <SignedOut>
-            <Button className="button bg-purple-gradient bg-cover">
-              <Link href="/sign-in">Login</Link>
-            </Button>
+            <Link
+              href="/sign-in"
+              className="
+            px-2 py-2 text-center rounded-full bg-purple-gradient bg-cover"
+            >
+              <Button className="text-xl bg-transparent hover:bg-transparent">
+                Login
+              </Button>
+            </Link>
           </SignedOut>
         </nav>
       </div>

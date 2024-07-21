@@ -10,6 +10,7 @@ import {
   SignedIn,
 } from "@clerk/nextjs";
 import { Variable } from "lucide-react";
+import Head from "next/head";
 
 const IBMPlex = IBM_Plex_Sans({
   subsets: ["latin"],

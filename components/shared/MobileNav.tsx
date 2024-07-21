@@ -23,8 +23,8 @@ const MobileNav = () => {
         <Image
           src="/assets/images/logo.png"
           alt="logo"
-          width={180}
-          height={28}
+          width={200}
+          height={100}
         />
       </Link>
       <nav className="flex gap-2">
@@ -45,8 +45,8 @@ const MobileNav = () => {
                 <Image
                   src="/assets/images/logo.png"
                   alt="logo"
-                  width={152}
-                  height={23}
+                  width={200}
+                  height={100}
                 />
 
                 <ul className="sidebar-nav-elements">
